@@ -1,0 +1,1 @@
+export default function KYCBadge() { return <div>KYC / SAFU Badge</div>; }

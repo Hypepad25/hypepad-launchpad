@@ -1,0 +1,1 @@
+export default function Promoted() { return <div>Promoted Tokens</div>; }
