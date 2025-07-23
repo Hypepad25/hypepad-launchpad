@@ -1,1 +1,1 @@
-export default function Staking() { return <div>Staking</div>; }
+export default function Staking() { return <div>Staking Page</div>; }

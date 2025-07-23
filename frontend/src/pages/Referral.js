@@ -1,1 +1,1 @@
-export default function Referral() { return <div>Referral Center</div>; }
+export default function Referral() { return <div>Referral Page</div>; }

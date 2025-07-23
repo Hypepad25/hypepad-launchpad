@@ -1,1 +1,1 @@
-export default function Locker() { return <div>Locker</div>; }
+export default function Locker() { return <div>Locker Page</div>; }
