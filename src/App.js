@@ -1,39 +1,110 @@
 
 import React from 'react';
-import './styles/hypepad-theme.css';
+import banner from '../assets/hypepad-banner.jpg';
+
+const styles = {
+  body: {
+    backgroundColor: '#1C1C1E',
+    color: '#F5F5F5',
+    fontFamily: 'Inter, sans-serif',
+    margin: 0,
+    padding: 0,
+  },
+  navbar: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '1rem 2rem',
+    borderBottom: '1px solid #FF6A00',
+    backgroundColor: '#1C1C1E'
+  },
+  navLinks: {
+    display: 'flex',
+    gap: '1rem',
+    fontWeight: 'bold',
+  },
+  hero: {
+    textAlign: 'center',
+    padding: '4rem 2rem',
+    backgroundColor: '#1C1C1E'
+  },
+  bannerImg: {
+    width: '100%',
+    maxHeight: '500px',
+    objectFit: 'cover',
+    marginBottom: '2rem'
+  },
+  button: {
+    background: 'linear-gradient(135deg, #FF6A00, #FF4500)',
+    color: 'white',
+    padding: '0.75rem 1.5rem',
+    fontWeight: 'bold',
+    borderRadius: '10px',
+    border: 'none',
+    marginTop: '1.5rem',
+    cursor: 'pointer'
+  },
+  section: {
+    textAlign: 'center',
+    padding: '4rem 2rem',
+    backgroundColor: '#121212',
+    color: '#F5F5F5'
+  },
+  footer: {
+    textAlign: 'center',
+    padding: '2rem',
+    backgroundColor: '#111',
+    color: '#888',
+    fontSize: '0.9rem'
+  },
+  cardGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '2rem',
+    marginTop: '2rem'
+  },
+  card: {
+    backgroundColor: '#1C1C1E',
+    border: '1px solid rgba(255, 106, 0, 0.4)',
+    borderRadius: '12px',
+    padding: '2rem',
+    color: '#F5F5F5'
+  }
+};
 
 function App() {
   return (
-    <div>
-      <header className="navbar">
-        <div className="logo">HYPEPAD</div>
-        <nav>
-          <a href="#" className="active">Home</a>
-          <a href="#">Create</a>
-          <a href="#">Dashboard</a>
-          <a href="#">Staking</a>
+    <div style={styles.body}>
+      <header style={styles.navbar}>
+        <div style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>HYPEPAD</div>
+        <nav style={styles.navLinks}>
+          <a href="#" style={{ color: '#F5F5F5' }}>Home</a>
+          <a href="#" style={{ color: '#F5F5F5' }}>Create</a>
+          <a href="#" style={{ color: '#F5F5F5' }}>Dashboard</a>
+          <a href="#" style={{ color: '#F5F5F5' }}>Staking</a>
         </nav>
       </header>
 
-      <section className="hero">
-        <h1>Fuel Your Launch. Rule the Hype.</h1>
+      <section style={styles.hero}>
+        <img src={banner} alt="HypePad Banner" style={styles.bannerImg} />
+        <h1 style={{ color: '#FF6A00' }}>Fuel Your Launch. Rule the Hype.</h1>
         <p>Launch your token, NFT, or presale with confidence using the most powerful multi-chain launchpad in crypto.</p>
-        <div className="launch-countdown">Launching in: 03:12:59</div>
-        <button className="button-primary">Launch Your Project</button>
+        <div style={{ color: '#FF6A00', marginTop: '1rem' }}>Launching in: 03:12:59</div>
+        <button style={styles.button}>Launch Your Project</button>
       </section>
 
-      <section className="section">
-        <h2>Why Choose HYPEPAD?</h2>
+      <section style={styles.section}>
+        <h2 style={{ color: '#FF6A00' }}>Why Choose HYPEPAD?</h2>
         <p>Our next-gen platform offers advanced anti-bot protection, cross-chain compatibility, referral systems, staking rewards, and fully customizable launch experiences.</p>
-        <div className="card-grid">
-          <div className="card">🛡️ Anti-Bot Protection</div>
-          <div className="card">🌐 Multi-Chain Support</div>
-          <div className="card">🚀 One-Click Launch</div>
-          <div className="card">💰 Creator Royalties</div>
+        <div style={styles.cardGrid}>
+          <div style={styles.card}>🛡️ Anti-Bot Protection</div>
+          <div style={styles.card}>🌐 Multi-Chain Support</div>
+          <div style={styles.card}>🚀 One-Click Launch</div>
+          <div style={styles.card}>💰 Creator Royalties</div>
         </div>
       </section>
 
-      <footer className="footer">
+      <footer style={styles.footer}>
         © 2025 HYPEPAD. All rights reserved.
       </footer>
     </div>
