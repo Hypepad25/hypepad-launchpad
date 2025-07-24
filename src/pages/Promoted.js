@@ -1,1 +1,1 @@
-export default function Promoted() { return <div>Promoted Tokens</div>; }
+export default function Promoted() { return <div>Promoted Page</div>; }

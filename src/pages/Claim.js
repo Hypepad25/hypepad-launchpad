@@ -1,0 +1,1 @@
+export default function Claim() { return <div>Claim Page</div>; }
