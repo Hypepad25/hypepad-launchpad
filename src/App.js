@@ -1,35 +1,43 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import TokenCreator from './pages/TokenCreator';
-import Dashboard from './pages/Dashboard';
-import Staking from './pages/Staking';
-import Locker from './pages/Locker';
-import Claim from './pages/Claim';
-import Leaderboard from './pages/Leaderboard';
-import Promoted from './pages/Promoted';
-import KYC from './pages/KYC';
-import Referral from './pages/Referral';
-import Settings from './pages/Settings';
+
+import React from 'react';
+import './styles/hypepad-theme.css';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/create' element={<TokenCreator />} />
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/staking' element={<Staking />} />
-        <Route path='/locker' element={<Locker />} />
-        <Route path='/claim' element={<Claim />} />
-        <Route path='/leaderboard' element={<Leaderboard />} />
-        <Route path='/promoted' element={<Promoted />} />
-        <Route path='/kyc' element={<KYC />} />
-        <Route path='/referral' element={<Referral />} />
-        <Route path='/settings' element={<Settings />} />
-      </Routes>
-    </Router>
+    <div>
+      <div className="spark-particles"></div>
+      <header className="navbar">
+        <div><a href="#" className="active">HYPEPAD</a></div>
+        <div>
+          <a href="#">Home</a>
+          <a href="#">Create</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Staking</a>
+        </div>
+      </header>
+
+      <section className="hero">
+        <h1>Fuel Your Launch. Rule the Hype.</h1>
+        <p>Launch your token, NFT, or presale with confidence using the most powerful multi-chain launchpad in crypto.</p>
+        <div className="launch-countdown">Launching in: 03:12:59</div>
+        <button className="button-primary">Launch Your Project</button>
+      </section>
+
+      <section className="section">
+        <h2>Why Choose HYPEPAD?</h2>
+        <p>Our next-gen platform offers advanced anti-bot protection, cross-chain compatibility, referral systems, staking rewards, and fully customizable launch experiences.</p>
+        <div className="card-grid">
+          <div className="card">🛡️ Anti-Bot Protection</div>
+          <div className="card">🌐 Multi-Chain Support</div>
+          <div className="card">🚀 One-Click Launch</div>
+          <div className="card">💰 Creator Royalties</div>
+        </div>
+      </section>
+
+      <footer className="footer">
+        © 2025 HYPEPAD. All rights reserved.
+      </footer>
+    </div>
   );
 }
 
