@@ -1,6 +1,6 @@
 
 import React from 'react';
-import banner from '../assets/hypepad-banner.jpg';
+
 
 const styles = {
   body: {
@@ -86,7 +86,7 @@ function App() {
       </header>
 
       <section style={styles.hero}>
-        <img src={banner} alt="HypePad Banner" style={styles.bannerImg} />
+        <img src="/assets/hypepad-banner.jpg" alt="HypePad Banner" style={styles.bannerImg} />
         <h1 style={{ color: '#FF6A00' }}>Fuel Your Launch. Rule the Hype.</h1>
         <p>Launch your token, NFT, or presale with confidence using the most powerful multi-chain launchpad in crypto.</p>
         <div style={{ color: '#FF6A00', marginTop: '1rem' }}>Launching in: 03:12:59</div>
