@@ -5,15 +5,14 @@ import './styles/hypepad-theme.css';
 function App() {
   return (
     <div>
-      <div className="spark-particles"></div>
       <header className="navbar">
-        <div><a href="#" className="active">HYPEPAD</a></div>
-        <div>
-          <a href="#">Home</a>
+        <div className="logo">HYPEPAD</div>
+        <nav>
+          <a href="#" className="active">Home</a>
           <a href="#">Create</a>
           <a href="#">Dashboard</a>
           <a href="#">Staking</a>
-        </div>
+        </nav>
       </header>
 
       <section className="hero">
