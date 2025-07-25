@@ -1,8 +1,7 @@
 
 .navbar {
-  background-color: #000;
+  background-color: #111;
   padding: 1rem;
-  color: #fff;
 }
 .navbar-container {
   display: flex;
@@ -30,6 +29,7 @@
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    color: white;
   }
   .navbar-menu {
     display: none;
