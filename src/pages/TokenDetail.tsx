@@ -1,0 +1,1 @@
+// Full token detail page with all features
