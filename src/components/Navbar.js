@@ -1,31 +1,13 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-import logo from '../assets/logo.png';
 
-function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          <img src={logo} alt="HypePad Logo" />
-        </Link>
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
-        </button>
-        <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
-          <Link to="/launch">Launch</Link>
-          <Link to="/stake">Stake</Link>
-          <Link to="/promote">Promote</Link>
-          <Link to="/locker">Locker</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-      </div>
-    </nav>
-  );
-}
+const Navbar = () => (
+  <nav style={{ background: '#111', color: '#fff', padding: '10px' }}>
+    <Link to='/' style={{ marginRight: 15, color: '#fff' }}>Home</Link>
+    <Link to='/create' style={{ marginRight: 15, color: '#fff' }}>Create</Link>
+    <Link to='/dashboard' style={{ marginRight: 15, color: '#fff' }}>Dashboard</Link>
+    <Link to='/staking' style={{ marginRight: 15, color: '#fff' }}>Staking</Link>
+  </nav>
+);
 
 export default Navbar;
