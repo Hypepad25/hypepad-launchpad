@@ -1,1 +1,1 @@
-This is the full-featured HypePad UI build structure.
+HypePad UI: Fully routed and accessible build
