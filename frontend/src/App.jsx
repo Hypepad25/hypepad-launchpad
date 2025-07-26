@@ -1,4 +1,25 @@
 
+
+const styles = {
+  body: {
+    fontFamily: 'sans-serif',
+    backgroundColor: '#000',
+    color: '#0f0',
+    minHeight: '100vh',
+    padding: '2rem',
+    textAlign: 'center',
+  },
+  navbar: {
+    marginBottom: '2rem',
+  },
+  navLinks: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '2rem',
+    flexWrap: 'wrap',
+  }
+};
+
 import React from 'react';
 
 
