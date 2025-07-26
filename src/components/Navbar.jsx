@@ -1,14 +1,1 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/staking">Staking</Link>
-    </nav>
-  );
-}
-
-export default Navbar;
+// Navbar with language selector + wallet connect
