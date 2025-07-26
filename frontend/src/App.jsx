@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/hypepad-theme.css';
-import banner from '../assets/hypepad-banner.jpg';
+import './styles/hypepad-theme.css';
+import banner from './assets/hypepad-banner.jpg';
 
 export default function App() {
   return (
