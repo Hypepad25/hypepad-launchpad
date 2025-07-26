@@ -1,1 +1,0 @@
-export default function ClaimPortal() { return <div>Claim Portal</div>; }

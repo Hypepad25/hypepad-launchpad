@@ -1,1 +1,0 @@
-export default function Promoted() { return <div>Promoted Page</div>; }

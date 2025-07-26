@@ -1,0 +1,1 @@
+// Placeholder Staking.sol contract
