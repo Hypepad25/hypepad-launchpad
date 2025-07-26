@@ -1,1 +1,1 @@
-// Real-time chat using Socket.io
+// Real-time chat component using Socket.io

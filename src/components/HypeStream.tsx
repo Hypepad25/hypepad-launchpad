@@ -1,1 +1,1 @@
-// Livestream component using WebRTC
+// HypeStream component for livestream using WebRTC

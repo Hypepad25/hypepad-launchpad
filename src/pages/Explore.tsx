@@ -1,1 +1,1 @@
-// Token listing, trending, presales
+// Explore page listing live, upcoming, trending tokens

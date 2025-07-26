@@ -1,1 +1,1 @@
-// Voting system for token pages
+// Voting component for upvote/downvote system
