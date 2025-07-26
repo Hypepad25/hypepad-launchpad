@@ -1,19 +1,23 @@
-import React from 'react';
-import './styles/hypepad-theme.css';
-import banner from './assets/hypepad-banner.jpg';
 
-export default function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/hypepad-theme.css';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Staking from './pages/Staking';
+
+function App() {
   return (
-    <div className="body" style={{ backgroundImage: `url(${banner})` }}>
-      <header className="navbar">
-        <div className="logo-title">HYPEPAD</div>
-        <nav className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Presales</a>
-          <a href="#">Staking</a>
-          <a href="mailto:contact@hypepad.app">Support</a>
-        </nav>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/staking" element={<Staking />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
+export default App;
