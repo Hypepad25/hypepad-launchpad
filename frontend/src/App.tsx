@@ -1,40 +1,23 @@
 
 import React from 'react';
-import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Explore from './pages/Explore';
-import Staking from './pages/Staking';
-import Locker from './pages/Locker';
-import Referral from './pages/Referral';
-import Claim from './pages/Claim';
-import Create from './pages/Create';
-import Dashboard from './pages/Dashboard';
-import HypeStream from './components/HypeStream';
-import ChatBox from './components/ChatBox';
-import HypeVote from './components/HypeVote';
-import CommentSection from './components/CommentSection';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explore" element={<Explore />} />
-        <Route path="/staking" element={<Staking />} />
-        <Route path="/locker" element={<Locker />} />
-        <Route path="/referral" element={<Referral />} />
-        <Route path="/claim" element={<Claim />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/stream" element={<HypeStream />} />
-        <Route path="/chat" element={<ChatBox />} />
-        <Route path="/vote" element={<HypeVote />} />
-        <Route path="/comments" element={<CommentSection />} />
-      </Routes>
-    </Router>
+    <div style={{
+      fontFamily: 'sans-serif',
+      backgroundColor: '#000',
+      color: '#0f0',
+      minHeight: '100vh',
+      padding: '2rem',
+      textAlign: 'center'
+    }}>
+      <h1>HypePad</h1>
+      <p>Next-Gen Launchpad. Built for Founders. Powered by Community.</p>
+      <nav style={{ marginTop: '2rem' }}>
+        <a href="#" style={{ color: '#0ff', margin: '0 1rem' }}>Live Tokens</a>
+        <a href="#" style={{ color: '#0ff', margin: '0 1rem' }}>Presales</a>
+        <a href="mailto:contact@hypepad.app" style={{ color: '#0ff', margin: '0 1rem' }}>Support</a>
+      </nav>
+    </div>
   );
 }
-
-export default App;
