@@ -1,0 +1,1 @@
+// Standard token launch form (EVM)
