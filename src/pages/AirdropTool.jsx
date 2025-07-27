@@ -1,1 +1,0 @@
-export default function AirdropTool() { return <h2>Airdrop Tool</h2>; }

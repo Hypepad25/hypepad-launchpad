@@ -1,1 +1,0 @@
-export default function DAOVoting() { return <h2>DAO Voting Page</h2>; }

@@ -1,1 +1,0 @@
-export default function DashboardDev() { return <h2>Developer Dashboard</h2>; }

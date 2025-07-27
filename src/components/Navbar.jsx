@@ -1,1 +1,0 @@
-// Collapsible mobile navbar

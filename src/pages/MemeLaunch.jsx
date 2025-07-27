@@ -1,1 +1,0 @@
-export default function MemeLaunch() { return <h2>Launch Meme Coin Page</h2>; }

@@ -1,1 +1,0 @@
-export default function DashboardUser() { return <h2>User Dashboard</h2>; }

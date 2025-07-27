@@ -1,1 +1,0 @@
-// Solidity bonding curve contract

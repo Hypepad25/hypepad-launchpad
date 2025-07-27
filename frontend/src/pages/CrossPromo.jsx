@@ -1,1 +1,0 @@
-export default function CrossPromo() { return <h2>Cross Promo Tool</h2>; }

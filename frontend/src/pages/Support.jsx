@@ -1,1 +1,0 @@
-// Contact form sending to contact@hypepad.app

@@ -1,1 +1,0 @@
-export default function TokenCreator() { return <h2>Create Token Page</h2>; }
