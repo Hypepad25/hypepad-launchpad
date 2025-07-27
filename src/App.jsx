@@ -16,37 +16,37 @@ import './styles/theme.css';
 import './App.css';
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [walletAddress, setWalletAddress] = useState("");
+
+  const handleConnectWallet = async () => {
+    await connectWallet(setWalletAddress);
+  };
 
   return (
     <Router>
-      <nav className="navbar">
-        <div className="navbar-top">
-          <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>☰</button>
-          <div className="wallet-connect">
-            {walletAddress ? (
-              <span className="wallet-address">{walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}</span>
-            ) : (
-              <button className="wallet-button" onClick={() => connectWallet(setWalletAddress)}>
-                Connect Wallet
-              </button>
-            )}
-          </div>
+      <div className="navbar">
+        <div className="navbar-header">
+          <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </button>
+          <button className="wallet-button" onClick={handleConnectWallet}>
+            {walletAddress ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 'Connect Wallet'}
+          </button>
         </div>
-        <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/launch-meme" onClick={() => setIsOpen(false)}>Launch Meme</Link>
-          <Link to="/create-token" onClick={() => setIsOpen(false)}>Create Token</Link>
-          <Link to="/leaderboard" onClick={() => setIsOpen(false)}>Leaderboard</Link>
-          <Link to="/dashboard-user" onClick={() => setIsOpen(false)}>User Dashboard</Link>
-          <Link to="/dashboard-dev" onClick={() => setIsOpen(false)}>Dev Dashboard</Link>
-          <Link to="/airdrop" onClick={() => setIsOpen(false)}>Airdrop Tool</Link>
-          <Link to="/dao" onClick={() => setIsOpen(false)}>DAO Voting</Link>
-          <Link to="/mint-nft" onClick={() => setIsOpen(false)}>NFT Mint</Link>
-          <Link to="/cross-promo" onClick={() => setIsOpen(false)}>Cross Promo</Link>
+        <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/launch-meme" onClick={() => setMenuOpen(false)}>Launch Meme</Link>
+          <Link to="/create-token" onClick={() => setMenuOpen(false)}>Create Token</Link>
+          <Link to="/leaderboard" onClick={() => setMenuOpen(false)}>Leaderboard</Link>
+          <Link to="/dashboard-user" onClick={() => setMenuOpen(false)}>User Dashboard</Link>
+          <Link to="/dashboard-dev" onClick={() => setMenuOpen(false)}>Dev Dashboard</Link>
+          <Link to="/airdrop" onClick={() => setMenuOpen(false)}>Airdrop Tool</Link>
+          <Link to="/dao" onClick={() => setMenuOpen(false)}>DAO Voting</Link>
+          <Link to="/mint-nft" onClick={() => setMenuOpen(false)}>NFT Mint</Link>
+          <Link to="/cross-promo" onClick={() => setMenuOpen(false)}>Cross Promo</Link>
         </div>
-      </nav>
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/launch-meme" element={<MemeLaunch />} />
