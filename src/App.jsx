@@ -1,17 +1,11 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import SubmitAd from './pages/SubmitAd';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 
 export default function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/submit-ad" element={<SubmitAd />} />
-      </Routes>
-    </Router>
-  );
+    <div style={{ backgroundColor: '#000', color: '#fff', height: '100vh', padding: '2rem' }}>
+      <h1>🚀 HYPEPAD</h1>
+      <p>The all-in-one multi-chain launchpad for tokens, NFTs, and DAOs.</p>
+    </div>
+  )
 }

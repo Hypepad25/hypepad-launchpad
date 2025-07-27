@@ -1,21 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 
-const App = () => (
-  <Router>
-    <nav>
-      <div className="logo">🚀 HYPEPAD</div>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/contact">Promote</Link>
-      </div>
-    </nav>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-  </Router>
-);
-export default App;
+export default function App() {
+  return (
+    <div style={{ backgroundColor: '#000', color: '#fff', height: '100vh', padding: '2rem' }}>
+      <h1>🚀 HYPEPAD</h1>
+      <p>The all-in-one multi-chain launchpad for tokens, NFTs, and DAOs.</p>
+    </div>
+  )
+}
