@@ -1,28 +1,10 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Home.css';
 
-function Home() {
-  return (
-    <div className="home">
-      <div className="banner-container">
-        <img src="/assets/hypepad-banner.jpg" alt="HypePad Banner" className="banner-image" />
-      </div>
-      <h2 className="slogan">Build Trust. Launch Globally. Scale Fearlessly.</h2>
-      <div className="home-buttons">
-        <Link to="/launch-meme"><button>Launch Meme Coin</button></Link>
-        <Link to="/create-token"><button>Create Token</button></Link>
-        <Link to="/leaderboard"><button>View Leaderboard</button></Link>
-        <Link to="/dashboard-user"><button>User Dashboard</button></Link>
-        <Link to="/dashboard-dev"><button>Developer Dashboard</button></Link>
-        <Link to="/airdrop"><button>Airdrop Tool</button></Link>
-        <Link to="/dao"><button>DAO Voting</button></Link>
-        <Link to="/mint-nft"><button>NFT Mint</button></Link>
-        <Link to="/cross-promo"><button>Cross Promo</button></Link>
-      </div>
-    </div>
-  );
-}
+const Home = () => (
+  <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+    <h1>Welcome to HYPEPAD</h1>
+    <p>The all-in-one multi-chain launchpad for tokens, NFTs, and DAOs.</p>
+  </div>
+);
 
 export default Home;
