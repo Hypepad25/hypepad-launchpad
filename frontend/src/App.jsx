@@ -1,17 +1,21 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
-import SubmitAd from './pages/SubmitAd';
+import Contact from './pages/Contact';
 
-export default function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/submit-ad" element={<SubmitAd />} />
-      </Routes>
-    </Router>
-  );
-}
+const App = () => (
+  <Router>
+    <nav>
+      <div className="logo">🚀 HYPEPAD</div>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/contact">Promote</Link>
+      </div>
+    </nav>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  </Router>
+);
+export default App;
