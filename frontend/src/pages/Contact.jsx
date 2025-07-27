@@ -1,33 +1,21 @@
 import React, { useState } from 'react';
-
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
-
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
   const handleSubmit = (e) => {
     e.preventDefault();
     window.location.href = `mailto:contact@hypepad.app?subject=Contact from ${form.name}&body=${form.message}%0A%0AFrom: ${form.name} (${form.email})`;
   };
-
   return (
     <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto', color: '#fff' }}>
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input name="name" type="text" value={form.name} onChange={handleChange} required style={{ width: '100%', marginBottom: '1rem' }} />
-        <label>Email:</label>
-        <input name="email" type="email" value={form.email} onChange={handleChange} required style={{ width: '100%', marginBottom: '1rem' }} />
-        <label>Message:</label>
-        <textarea name="message" value={form.message} onChange={handleChange} required style={{ width: '100%', height: '120px' }} />
-        <br /><br />
-        <button type="submit">Send Message</button>
+        <input name="name" placeholder="Name" value={form.name} onChange={handleChange} required /><br />
+        <input name="email" type="email" placeholder="Email" value={form.email} onChange={handleChange} required /><br />
+        <textarea name="message" placeholder="Message" value={form.message} onChange={handleChange} required /><br />
+        <button type="submit">Send</button>
       </form>
     </div>
   );
 };
-
 export default Contact;
