@@ -1,1 +1,1 @@
-const Home = () => <div style={{color:'#fff'}}><h1>🚀 Welcome to HYPEPAD</h1><p>Full production UI incoming...</p></div>; export default Home;
+// Landing page with banner and slogan
