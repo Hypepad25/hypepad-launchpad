@@ -1,0 +1,1 @@
+// FAQ section with search bar
