@@ -12,3 +12,5 @@ const Navbar = () => (
 );
 
 export default Navbar;
+
+<Link to="/contact" style={{ marginLeft: "1rem", color: "#fff" }}>Contact</Link>
