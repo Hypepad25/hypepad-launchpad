@@ -1,1 +1,1 @@
-// NFT Mint page UI
+export default function NFTMint() { return <h2>NFT Mint Page</h2>; }
