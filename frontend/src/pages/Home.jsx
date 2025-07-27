@@ -1,12 +1,15 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Home.css';
 
 function Home() {
   return (
     <div className="home">
-      <h1>Welcome to HypePad</h1>
-      <p>All-in-One Launchpad: Anti-bot, Staking, Referrals</p>
+      <div className="banner-container">
+        <img src="/assets/hypepad-banner.jpg" alt="HypePad Banner" className="banner-image" />
+      </div>
+      <h2 className="slogan">Build Trust. Launch Globally. Scale Fearlessly.</h2>
       <div className="home-buttons">
         <Link to="/launch-meme"><button>Launch Meme Coin</button></Link>
         <Link to="/create-token"><button>Create Token</button></Link>
