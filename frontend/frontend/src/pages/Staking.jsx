@@ -1,3 +1,3 @@
 import React from 'react';
-const Staking = () => <h1>Staking Page - HypePad</h1>;
+const Staking = () => <div style={ padding: '2rem' }><h2>Staking Page</h2></div>;
 export default Staking;

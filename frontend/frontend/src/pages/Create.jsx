@@ -1,3 +1,3 @@
 import React from 'react';
-const Create = () => <h1>Create Page - HypePad</h1>;
+const Create = () => <div style={ padding: '2rem' }><h2>Create Page</h2></div>;
 export default Create;

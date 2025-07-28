@@ -7,6 +7,7 @@ import Staking from './pages/Staking';
 import Leaderboard from './pages/Leaderboard';
 import Support from './pages/Support';
 import Whitepaper from './pages/Whitepaper';
+import Partners from './pages/Partners';
 import './index.css';
 
 const App = () => {
@@ -15,7 +16,6 @@ const App = () => {
 
   const handleWalletConnect = () => {
     setWalletConnected(!walletConnected);
-    // Placeholder logic
   };
 
   return (
@@ -35,6 +35,7 @@ const App = () => {
           <Link to="/leaderboard" onClick={() => setMenuOpen(false)}>Leaderboard</Link>
           <Link to="/support" onClick={() => setMenuOpen(false)}>Support</Link>
           <Link to="/whitepaper" onClick={() => setMenuOpen(false)}>Whitepaper</Link>
+          <Link to="/partners" onClick={() => setMenuOpen(false)}>Partners</Link>
         </div>
       </nav>
       <div className="content">
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/support" element={<Support />} />
           <Route path="/whitepaper" element={<Whitepaper />} />
+          <Route path="/partners" element={<Partners />} />
         </Routes>
       </div>
     </Router>

@@ -1,3 +1,3 @@
 import React from 'react';
-const Whitepaper = () => <h1>Whitepaper Page - HypePad</h1>;
+const Whitepaper = () => <div style={ padding: '2rem' }><h2>Whitepaper Page</h2></div>;
 export default Whitepaper;
