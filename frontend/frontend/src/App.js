@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Create from './pages/Create';
@@ -7,20 +7,28 @@ import Staking from './pages/Staking';
 import Leaderboard from './pages/Leaderboard';
 import Support from './pages/Support';
 import Whitepaper from './pages/Whitepaper';
+import './index.css';
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Router>
-      <nav style={{ backgroundColor: '#1C1C1E', padding: '1rem' }}>
-        <Link to="/" style={{ margin: '0 1rem', color: '#FF6A00' }}>Home</Link>
-        <Link to="/create" style={{ margin: '0 1rem', color: '#FF6A00' }}>Create</Link>
-        <Link to="/dashboard" style={{ margin: '0 1rem', color: '#FF6A00' }}>Dashboard</Link>
-        <Link to="/staking" style={{ margin: '0 1rem', color: '#FF6A00' }}>Staking</Link>
-        <Link to="/leaderboard" style={{ margin: '0 1rem', color: '#FF6A00' }}>Leaderboard</Link>
-        <Link to="/support" style={{ margin: '0 1rem', color: '#FF6A00' }}>Support</Link>
-        <Link to="/whitepaper" style={{ margin: '0 1rem', color: '#FF6A00' }}>Whitepaper</Link>
+      <nav className="navbar">
+        <div className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </div>
+        <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/create" onClick={() => setMenuOpen(false)}>Create</Link>
+          <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
+          <Link to="/staking" onClick={() => setMenuOpen(false)}>Staking</Link>
+          <Link to="/leaderboard" onClick={() => setMenuOpen(false)}>Leaderboard</Link>
+          <Link to="/support" onClick={() => setMenuOpen(false)}>Support</Link>
+          <Link to="/whitepaper" onClick={() => setMenuOpen(false)}>Whitepaper</Link>
+        </div>
       </nav>
-      <div style={{ padding: '2rem', color: '#FF6A00' }}>
+      <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
