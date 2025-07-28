@@ -1,1 +1,0 @@
-// Voting system for token pages
