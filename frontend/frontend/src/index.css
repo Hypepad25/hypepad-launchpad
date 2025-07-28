@@ -9,12 +9,25 @@ body {
 .navbar {
   background-color: #1C1C1E;
   padding: 1rem;
+}
+
+.navbar-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wallet-button {
+  background-color: #FF6A00;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .navbar-toggle {
-  display: none;
   font-size: 1.5rem;
   cursor: pointer;
   color: #FF6A00;
@@ -25,6 +38,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .navbar-links a {
@@ -38,14 +52,6 @@ body {
 
 /* Responsive layout */
 @media (max-width: 768px) {
-  .navbar {
-    align-items: flex-start;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -54,6 +60,16 @@ body {
 
   .navbar-links.open {
     display: flex;
+  }
+
+  .navbar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .wallet-button {
+    align-self: flex-end;
   }
 
   .content {

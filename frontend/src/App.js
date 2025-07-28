@@ -11,12 +11,21 @@ import './index.css';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [walletConnected, setWalletConnected] = useState(false);
+
+  const handleWalletConnect = () => {
+    setWalletConnected(!walletConnected);
+    // Placeholder logic
+  };
 
   return (
     <Router>
       <nav className="navbar">
-        <div className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
+        <div className="navbar-header">
+          <div className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>☰</div>
+          <button className="wallet-button" onClick={handleWalletConnect}>
+            {walletConnected ? 'Connected' : 'Connect Wallet'}
+          </button>
         </div>
         <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
